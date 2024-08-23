@@ -82,3 +82,90 @@ To add a collaborator to a GitHub repository and share write permissions, follow
 8. Confirmation:
    You can confirm the collaborator has accepted by checking the Collaborators list in the repository settings. Once accepted, their status will change from "Pending" to active.
    Now the collaborator can push commits and manage the repository based on the permissions you've assigned.
+
+# e. What is the difference between git and GitHub?
+
+Git and GitHub are closely related but serve different purposes. Here's a breakdown of their differences:
+
+1. What They Are:
+   Git:
+   Git is a distributed version control system (VCS) that tracks changes in source code during software development.
+   It allows multiple developers to work on a project simultaneously without overwriting each other's work.
+   Git is a command-line tool that can be installed on your local machine.
+   GitHub:
+   GitHub is a cloud-based platform that hosts Git repositories and provides a web interface for version control and collaboration.
+   It adds a social and collaborative layer to Git, allowing users to share code, track issues, and review contributions.
+   GitHub is a service (now owned by Microsoft) that makes it easier to use Git, especially for distributed teams.
+2. Functions:
+   Git:
+   Manages code versions, tracks changes, and facilitates branching and merging.
+   Operates locally on your machine, but can be used with remote repositories.
+   Provides commands like git init, git commit, git branch, git merge, and git pull.
+   GitHub:
+   Hosts repositories in the cloud, making them accessible from anywhere.
+   Offers additional features like pull requests, issues tracking, wikis, and project boards.
+   Provides integration with various CI/CD pipelines, and third-party tools, and allows team collaboration.
+3. Usage:
+   Git:
+   Primarily used through the command line or Git GUI clients.
+   You can use Git without GitHub by setting up your own remote repository or working entirely locally.
+   GitHub:
+   Used through a web browser or GitHub desktop application.
+   Enhances Git by offering a centralized location for remote repositories and collaboration features.
+4. Ownership and Accessibility:
+   Git:
+   Open-source and maintained by a large community.
+   Free to use on any platform, without the need for an account.
+   GitHub:
+   A proprietary platform with free and paid plans.
+   Requires an account to create repositories, collaborate on projects, or use its other features.
+5. Scope:
+   Git:
+   Focuses solely on version control.
+   Used by many platforms, including Bitbucket, GitLab, and GitHub.
+   GitHub:
+   Extends Git with additional tools for project management, collaboration, and code review.
+   Specific to Git, but similar services like GitLab and Bitbucket provide comparable features.
+
+In summary, Git is the underlying technology that handles version control, while GitHub is a platform built on top of Git to make it easier to collaborate, manage, and share code with others.
+
+# f. What does git diff do?
+
+The git diff command is used in Git to show the differences between various states of your codebase. It allows you to compare changes that have been made between commits, branches, or the working directory and the staging area. Here are the common uses of git diff:
+
+1. Compare Working Directory with the Staging Area:
+   Command: git diff
+   Description: This shows the changes that have been made in the working directory but have not yet been staged (i.e., changes not yet added with git add).
+   Use Case: You’ve modified files but haven’t staged them yet, and you want to see what’s changed.
+2. Compare the Staging Area with the Last Commit:
+   Command: git diff --staged or git diff --cached
+   Description: This shows the changes that have been staged (added with git add) but not yet committed.
+   Use Case: You’ve staged some changes and want to review them before making a commit.
+3. Compare Two Commits:
+   Command: git diff <commit1> <commit2>
+   Description: This shows the changes between two specific commits.
+   Use Case: You want to see what has changed between two points in your project’s history.
+4. Compare a Commit with the Working Directory:
+   Command: git diff <commit>
+   Description: This shows the differences between a specific commit and your current working directory.
+   Use Case: You want to see how your current work compares to a previous commit.
+5. Compare Two Branches:
+   Command: git diff <branch1> <branch2>
+   Description: This shows the differences between two branches.
+   Use Case: You want to compare the work done on different branches before merging or deciding on further action.
+6. Show Changes in a Specific File:
+   Command: git diff <file>
+   Description: This shows the changes in a specific file.
+   Use Case: You want to focus on the differences in a single file rather than the entire project.
+7. Show Changes with Word or Line Context:
+   Command: git diff --word-diff or git diff --color-words
+   Description: This shows differences with word-level granularity, highlighting the actual words that changed, rather than entire lines.
+   Use Case: Useful for reviewing small changes within a line, like editing a single word in a sentence.
+8. Show Changes for a Specific Path or Directory:
+   Command: git diff <path/to/directory>
+   Description: This limits the diff output to changes in a specific directory.
+   Use Case: You want to see differences in only a part of your project.
+   Output of git diff:
+   The command outputs a line-by-line comparison, showing added lines with a + sign and removed lines with a - sign. This output allows developers to see exactly what has changed between the two states being compared.
+
+In summary, git diff is a powerful tool for inspecting changes in your code, helping you understand what modifications have been made before staging, committing, or merging your code.
