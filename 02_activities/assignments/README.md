@@ -27,3 +27,58 @@ d) Automated Testing: Many platforms that support pull requests, such as GitHub,
 e) Approval and Merging: Once the changes have been reviewed and approved, the pull request can be merged into the target branch. This typically involves clicking a "Merge" button on the platform, which combines the changes from the source branch into the target branch.
 
 In summary, a pull request is a powerful tool for collaborative development, enabling teams to review, discuss, and integrate changes efficiently and effectively.
+
+# c. Describe the steps to open a pull request?
+
+To open a pull request in GitHub, follow these steps:
+
+1. Create a New Branch: Before making changes, create a new branch from the main branch (or the branch you want to base your changes on). You can do this using the following command in your terminal:
+   git checkout -b new-branch-name
+
+2. Make Your Changes: Edit the files as needed to implement your feature or fix.
+
+3. Stage and Commit Your Changes: Once you've made your changes, stage them using git add and then commit them with a meaningful commit message:
+   git add .
+   git commit -m "Your commit message"
+
+4. Push Your Branch to GitHub: Push your new branch to the remote repository on GitHub:
+   git push origin new-branch-name
+
+5. Open a Pull Request on GitHub:
+   5.1) Go to your repository on GitHub.
+   You should see a banner or a button suggesting that you recently pushed a branch and offering to open a pull request. Click on "Compare & pull request." If you don't see the banner, you can manually navigate to the "Pull requests" tab and click on "New pull request."
+   5.2) Select the Branches:
+   In the "base" dropdown, select the branch you want to merge your changes into (usually main or master).
+   In the "compare" dropdown, select the branch that contains your changes (the branch you just pushed).
+   5.3) Fill Out the Pull Request Form:
+   Provide a descriptive title for your pull request.
+   Write a detailed description explaining what your changes do, why they are necessary, and any other relevant information.
+   Optionally, you can add labels, assign reviewers, and link issues related to your pull request.
+   5.4) Create the Pull Request: Click on "Create pull request" to submit your request for review.
+
+Your pull request is now open, and your team members can review your changes, provide feedback, and eventually merge your branch into the main codebase.
+
+# d. Describe the steps to add a collaborator to a repository (share write permissions)
+
+To add a collaborator to a GitHub repository and share write permissions, follow these steps:
+
+1. Access the Repository:
+   Log in to your GitHub account.
+   Navigate to the repository where you want to add a collaborator.
+2. Go to Repository Settings:
+   On the repository's main page, click on the Settings tab located near the top of the page, usually next to Security and Insights.
+3. Navigate to Collaborators:
+   In the left sidebar, under the "Access" section, click on Collaborators & teams.
+4. Add a Collaborator:
+   In the "Manage Access" section, click the Invite a collaborator button.
+   In the search box that appears, type the GitHub username or email address of the person you want to add.
+   Select the correct user from the list.
+5. Set Permissions:
+   After selecting the user, you can set their permissions. For write access, select Write from the available options. You can also choose other permission levels like Read, Triage, Maintain, or Admin depending on what you want them to do.
+6. Send the Invitation:
+   Click the Send invitation button. The user will receive an email invitation.
+7. Wait for Acceptance:
+   The invited collaborator will need to accept the invitation. Once they accept, they will have the permissions you assigned.
+8. Confirmation:
+   You can confirm the collaborator has accepted by checking the Collaborators list in the repository settings. Once accepted, their status will change from "Pending" to active.
+   Now the collaborator can push commits and manage the repository based on the permissions you've assigned.
